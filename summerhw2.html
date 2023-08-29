@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Group <number> Scoring</title>
+    <script>
+        function calculateTotal() {
+            let basicRequirements = parseInt(document.getElementById("basicRequirements").value) || 0;
+            let effortUnderstanding = parseInt(document.getElementById("effortUnderstanding").value) || 0;
+            let engaging = parseInt(document.getElementById("engaging").value) || 0;
+            let educationalValue = parseInt(document.getElementById("educationalValue").value) || 0;
+            let creativeExtension = parseInt(document.getElementById("creativeExtension").value) || 0;
+            let overallRating = parseInt(document.getElementById("overallRating").value) || 0;
+
+            let total = basicRequirements + effortUnderstanding + engaging + educationalValue + creativeExtension + overallRating;
+            
+            document.getElementById("total").innerText = "Total: " + total + "/35";
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Group &lt;number&gt; Scoring</h1>
+
+    <label for="basicRequirements">Did the student/team meet all the basic requirements? (1-3 points): </label>
+    <input type="number" id="basicRequirements" min="0" max="3" onchange="calculateTotal()"><br>
+
+    <label for="effortUnderstanding">Does the screencast show effort and understanding? (0-15 points): </label>
+    <input type="number" id="effortUnderstanding" min="0" max="15" onchange="calculateTotal()"><br>
+
+    <label for="engaging">Was the screencast engaging and entertaining? (0-5 points): </label>
+    <input type="number" id="engaging" min="0" max="5" onchange="calculateTotal()"><br>
+
+    <label for="educationalValue">How would you rate the educational value? (0-5 points): </label>
+    <input type="number" id="educationalValue" min="0" max="5" onchange="calculateTotal()"><br>
+
+    <label for="creativeExtension">Was the extension creative and unique? (0-5 points): </label>
+    <input type="number" id="creativeExtension" min="0" max="5" onchange="calculateTotal()"><br>
+
+    <label for="overallRating">Overall rating of game with extension? (0-2 points): </label>
+    <input type="number" id="overallRating" min="0" max="2" onchange="calculateTotal()"><br>
+
+    <h2 id="total">Total: 0/35</h2>
+
+</body>
+</html>
