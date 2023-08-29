@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Project Scoring</title>
+    <script>
+        function calculateTotal() {
+            let basicRequirements = parseInt(document.getElementById("basicRequirements").value) || 0;
+            let screencastContent = parseInt(document.getElementById("screencastContent").value) || 0;
+            let engagement = parseInt(document.getElementById("engagement").value) || 0;
+            let educationalValue = parseInt(document.getElementById("educationalValue").value) || 0;
+            let creativity = parseInt(document.getElementById("creativity").value) || 0;
+            let overallRating = parseInt(document.getElementById("overallRating").value) || 0;
+            let docs = parseInt(document.getElementById("docs").value) || 0;
+            let topicsImplemented = parseInt(document.getElementById("topicsImplemented").value) || 0;
+            let comments = parseInt(document.getElementById("comments").value) || 0;
+            let organization = parseInt(document.getElementById("organization").value) || 0;
+
+            let total = basicRequirements + screencastContent + engagement + educationalValue + creativity + overallRating + docs + topicsImplemented + comments + organization;
+            
+            document.getElementById("total").innerText = "Total: " + total + "/35";
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Video Project Scoring</h1>
+
+    <label for="basicRequirements">Basic Requirements (1-3 points): </label>
+    <input type="number" id="basicRequirements" min="0" max="3" onchange="calculateTotal()"><br>
+
+    <label for="screencastContent">Screencast Content (0-5 points): </label>
+    <input type="number" id="screencastContent" min="0" max="5" onchange="calculateTotal()"><br>
+
+    <label for="engagement">Engagement and Entertainment (0-5 points): </label>
+    <input type="number" id="engagement" min="0" max="5" onchange="calculateTotal()"><br>
+
+    <label for="educationalValue">Educational Value (0-5 points): </label>
+    <input type="number" id="educationalValue" min="0" max="5" onchange="calculateTotal()"><br>
+
+    <label for="creativity">Creativity and Uniqueness of Extension (0-5 points): </label>
+    <input type="number" id="creativity" min="0" max="5" onchange="calculateTotal()"><br>
+
+    <label for="overallRating">Overall Rating of Game with Extension (0-2 points): </label>
+    <input type="number" id="overallRating" min="0" max="2" onchange="calculateTotal()"><br>
+
+    <label for="docs">Docs (0-8 points): </label>
+    <input type="number" id="docs" min="0" max="8" onchange="calculateTotal()"><br>
+
+    <label for="topicsImplemented">Topics Implemented (0-2 points): </label>
+    <input type="number" id="topicsImplemented" min="0" max="2" onchange="calculateTotal()"><br>
+
+    <label for="comments">Comments (0-2 points): </label>
+    <input type="number" id="comments" min="0" max="2" onchange="calculateTotal()"><br>
+
+    <label for="organization">Overall Organization and Clarity (0-1 points): </label>
+    <input type="number" id="organization" min="0" max="1" onchange="calculateTotal()"><br>
+
+    <h2 id="total">Total: 0/35</h2>
+
+</body>
+</html>
