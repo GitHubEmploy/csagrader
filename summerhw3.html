@@ -12,10 +12,8 @@
             let overallRating = parseInt(document.getElementById("overallRating").value) || 0;
             let docs = parseInt(document.getElementById("docs").value) || 0;
             let topicsImplemented = parseInt(document.getElementById("topicsImplemented").value) || 0;
-            let comments = parseInt(document.getElementById("comments").value) || 0;
-            let organization = parseInt(document.getElementById("organization").value) || 0;
 
-            let total = basicRequirements + screencastContent + engagement + educationalValue + creativity + overallRating + docs + topicsImplemented + comments + organization;
+            let total = basicRequirements + screencastContent + engagement + educationalValue + creativity + overallRating + docs + topicsImplemented;
             
             document.getElementById("total").innerText = "Total: " + total + "/35";
         }
@@ -48,12 +46,6 @@
 
     <label for="topicsImplemented">Topics Implemented (0-2 points): </label>
     <input type="number" id="topicsImplemented" min="0" max="2" onchange="calculateTotal()"><br>
-
-    <label for="comments">Comments (0-2 points): </label>
-    <input type="number" id="comments" min="0" max="2" onchange="calculateTotal()"><br>
-
-    <label for="organization">Overall Organization and Clarity (0-1 points): </label>
-    <input type="number" id="organization" min="0" max="1" onchange="calculateTotal()"><br>
 
     <h2 id="total">Total: 0/35</h2>
 
